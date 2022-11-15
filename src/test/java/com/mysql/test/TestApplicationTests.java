@@ -39,12 +39,18 @@ class TestApplicationTests {
 //         assertEquals("sbb가 무엇인가요?", q.getSubject());
     //     }
     
-    @Test
-    void testJpa() {
-        Optional<Question> oq = this.questionRepository.findById(1);
+//     @Test
+//     void testJpa() {
+//         Optional<Question> oq = this.questionRepository.findById(1);
         
-        if(oq.isPresent()) {
-            Question q = oq.get();
-            assertEquals("sbb가 무엇인가요?", q.getSubject());
-        }
+//         if(oq.isPresent()) {
+//             Question q = oq.get();
+//             assertEquals("sbb가 무엇인가요?", q.getSubject());
+//         }
+	
+	@Test
+	void testJpa() {
+		Questino q = questinoRepository.findBySubject("sbb가 무엇인가요?");
+		assertEquals(1, q.getId());
+	}
 }
