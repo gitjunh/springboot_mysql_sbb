@@ -2,6 +2,8 @@ package com.mysql.test;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.ManyToOne;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,5 +27,6 @@ public class Answer {
 
     private LocalDateTime createDate;
 
+    @ManyToOne
     private Question question;
 }
